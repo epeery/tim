@@ -790,12 +790,8 @@
         "signature": "40fe9ea7897b7b3f56f098e81fae01d76aeacdbcfe83e2ab73e6c2a7c7bf7e77"
       },
       "/home/eli/Projects/tim/src/commands/remove/index.ts": {
-        "version": "4c285b1ed534ce05127800fe1dcd954065756e84a610d3baa9fffac649969f95",
-        "signature": "fc7763ad8d5c42e3abcfe8f26902d84b766b9f1101a55b33fbacf6f06f8fb359"
-      },
-      "/home/eli/Projects/tim/src/commands/remove/session.ts": {
-        "version": "dd9f85dcdad3fe5013bdf15872357d05202382ed86c5fd90d1d5450a172fbb88",
-        "signature": "8a281b24db4b3c52590bca1c97f202a82926846c2981281349b1f2e227db2f78"
+        "version": "3b3cb789dc708f5fa454a1be2b114f812376271a02eb28269872b31dd8349706",
+        "signature": "ba7abd48aed3a2032bb966bcd63b1e0f1c5a17f5b608d69c5bd93f0eb39d59ff"
       },
       "/home/eli/Projects/tim/src/hooks/init/create_files.ts": {
         "version": "2550e94fc0f8a97adba2a3025fb7977db34378f40300ab2ebf72ed80e8bf1100",
@@ -2055,14 +2051,10 @@
       "/home/eli/Projects/tim/src/commands/remove/index.ts": [
         "/home/eli/Projects/tim/node_modules/@oclif/command/lib/index.d.ts",
         "/home/eli/Projects/tim/node_modules/@types/fs-extra/index.d.ts",
+        "/home/eli/Projects/tim/node_modules/@types/inquirer/index.d.ts",
         "/home/eli/Projects/tim/src/autocomplete-project.ts",
         "/home/eli/Projects/tim/src/get-current-project-file.ts",
         "/home/eli/Projects/tim/src/get-project-dir.ts",
-        "/home/eli/Projects/tim/node_modules/@types/node/util.d.ts",
-        "/home/eli/Projects/tim/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/eli/Projects/tim/src/commands/remove/session.ts": [
-        "/home/eli/Projects/tim/node_modules/@oclif/command/lib/index.d.ts",
         "/home/eli/Projects/tim/node_modules/@types/node/util.d.ts",
         "/home/eli/Projects/tim/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -3402,10 +3394,6 @@
         "/home/eli/Projects/tim/node_modules/@oclif/parser/lib/flags.d.ts",
         "/home/eli/Projects/tim/node_modules/@oclif/command/lib/index.d.ts"
       ],
-      "/home/eli/Projects/tim/src/commands/remove/session.ts": [
-        "/home/eli/Projects/tim/node_modules/@oclif/parser/lib/flags.d.ts",
-        "/home/eli/Projects/tim/node_modules/@oclif/command/lib/index.d.ts"
-      ],
       "/home/eli/Projects/tim/src/hooks/init/create_files.ts": [
         "/home/eli/Projects/tim/node_modules/@oclif/config/lib/index.d.ts"
       ],
@@ -3834,8 +3822,6 @@
       "/home/eli/Projects/tim/src/commands/start.ts",
       "/home/eli/Projects/tim/src/commands/status.ts",
       "/home/eli/Projects/tim/src/commands/time.ts",
-      "/home/eli/Projects/tim/src/commands/remove/index.ts",
-      "/home/eli/Projects/tim/src/commands/remove/session.ts",
       "/home/eli/Projects/tim/src/hooks/init/create_files.ts",
       "/home/eli/Projects/tim/node_modules/@types/chai/index.d.ts",
       "/home/eli/Projects/tim/node_modules/@types/lodash/common/common.d.ts",
@@ -3853,7 +3839,8 @@
       "/home/eli/Projects/tim/node_modules/@types/lodash/index.d.ts",
       "/home/eli/Projects/tim/node_modules/@types/mocha/index.d.ts",
       "/home/eli/Projects/tim/node_modules/@types/nock/index.d.ts",
-      "/home/eli/Projects/tim/node_modules/@types/sinon/ts3.1/index.d.ts"
+      "/home/eli/Projects/tim/node_modules/@types/sinon/ts3.1/index.d.ts",
+      "/home/eli/Projects/tim/src/commands/remove/index.ts"
     ]
   },
   "version": "3.4.5"
