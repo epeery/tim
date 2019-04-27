@@ -19,7 +19,7 @@ $ npm install -g tim-time
 $ tim COMMAND
 running command...
 $ tim (-v|--version|version)
-tim-time/0.7.0 linux-x64 node-v11.14.0
+tim-time/0.8.0 linux-x64 node-v11.14.0
 $ tim --help [COMMAND]
 USAGE
   $ tim COMMAND
@@ -52,7 +52,7 @@ EXAMPLE
   $ tim add myproject
 ```
 
-_See code: [src/commands/add.ts](https://github.com/epeery/Tim/blob/v0.7.0/src/commands/add.ts)_
+_See code: [src/commands/add.ts](https://github.com/epeery/Tim/blob/v0.8.0/src/commands/add.ts)_
 
 ## `tim help [COMMAND]`
 
@@ -86,7 +86,7 @@ EXAMPLE
   $ tim projects
 ```
 
-_See code: [src/commands/projects.ts](https://github.com/epeery/Tim/blob/v0.7.0/src/commands/projects.ts)_
+_See code: [src/commands/projects.ts](https://github.com/epeery/Tim/blob/v0.8.0/src/commands/projects.ts)_
 
 ## `tim remove [PROJECT]`
 
@@ -104,7 +104,7 @@ EXAMPLE
   $ tim remove myproject
 ```
 
-_See code: [src/commands/remove/index.ts](https://github.com/epeery/Tim/blob/v0.7.0/src/commands/remove/index.ts)_
+_See code: [src/commands/remove/index.ts](https://github.com/epeery/Tim/blob/v0.8.0/src/commands/remove/index.ts)_
 
 ## `tim start [PROJECT]`
 
@@ -118,7 +118,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/start.ts](https://github.com/epeery/Tim/blob/v0.7.0/src/commands/start.ts)_
+_See code: [src/commands/start.ts](https://github.com/epeery/Tim/blob/v0.8.0/src/commands/start.ts)_
 
 ## `tim status`
 
@@ -132,7 +132,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/status.ts](https://github.com/epeery/Tim/blob/v0.7.0/src/commands/status.ts)_
+_See code: [src/commands/status.ts](https://github.com/epeery/Tim/blob/v0.8.0/src/commands/status.ts)_
 
 ## `tim stop`
 
@@ -147,7 +147,7 @@ OPTIONS
   -n, --note=note
 ```
 
-_See code: [src/commands/stop.ts](https://github.com/epeery/Tim/blob/v0.7.0/src/commands/stop.ts)_
+_See code: [src/commands/stop.ts](https://github.com/epeery/Tim/blob/v0.8.0/src/commands/stop.ts)_
 
 ## `tim time`
 
@@ -161,5 +161,5 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/time.ts](https://github.com/epeery/Tim/blob/v0.7.0/src/commands/time.ts)_
+_See code: [src/commands/time.ts](https://github.com/epeery/Tim/blob/v0.8.0/src/commands/time.ts)_
 <!-- commandsstop -->
