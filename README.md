@@ -3,6 +3,8 @@
 
 Tim is a time tracker for your terminal
 
+NOTE: This project is in alpha. Things are prone to break.
+
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/tim-time.svg)](https://npmjs.org/package/tim-time)
 [![Downloads/week](https://img.shields.io/npm/dw/tim-time.svg)](https://npmjs.org/package/tim-time)
