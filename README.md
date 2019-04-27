@@ -1,4 +1,4 @@
-Tim
+:sparkles: Tim :memo:
 ==========
 
 Tim is a time tracker for your terminal
