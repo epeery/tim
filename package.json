@@ -6,7 +6,7 @@
   "bin": {
     "tim": "./bin/run"
   },
-  "bugs": "https://github.com/epeery/Tim/issues",
+  "bugs": "https://github.com/epeery/tim/issues",
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
