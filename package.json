@@ -1,0 +1,75 @@
+{
+  "name": "tim-time",
+  "description": "Tim is a time tracker for your terminal",
+  "version": "0.6.0",
+  "author": "Eli Peery",
+  "bin": {
+    "tim": "./bin/run"
+  },
+  "bugs": "https://github.com/epeery/Tim/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-autocomplete": "^0.1.0",
+    "@oclif/plugin-help": "^2",
+    "@types/dateformat": "^3.0.0",
+    "@types/fs-extra": "^5.0.5",
+    "@types/inquirer": "^6.0.1",
+    "dateformat": "^3.0.3",
+    "fuzzy": "^0.1.3",
+    "inquirer": "^6.3.1",
+    "inquirer-autocomplete-prompt": "^1.0.1",
+    "tslib": "^1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@oclif/test": "^1",
+    "@oclif/tslint": "^3",
+    "@types/chai": "^4",
+    "@types/mocha": "^5",
+    "@types/node": "^10",
+    "chai": "^4",
+    "globby": "^8",
+    "mocha": "^5",
+    "nyc": "^14.1.0",
+    "ts-node": "^8",
+    "tslint": "^5",
+    "typescript": "^3.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/epeery/tim",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "tim",
+    "plugins": [
+      "@oclif/plugin-help"
+    ],
+    "hooks": {
+      "init": [
+        "./lib/hooks/init/create_files"
+      ]
+    }
+  },
+  "repository": "epeery/Tim",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "tslint -p test -t stylish",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}
