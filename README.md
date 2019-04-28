@@ -32,6 +32,7 @@ USAGE
 <!-- commands -->
 * [`tim add [PROJECT]`](#tim-add-project)
 * [`tim help [COMMAND]`](#tim-help-command)
+* [`tim note [FILE]`](#tim-note-file)
 * [`tim projects`](#tim-projects)
 * [`tim remove [PROJECT]`](#tim-remove-project)
 * [`tim start [PROJECT]`](#tim-start-project)
@@ -72,6 +73,22 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6/src/commands/help.ts)_
+
+## `tim note [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ tim note [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/note.ts](https://github.com/epeery/tim/blob/v0.9.0-0/src/commands/note.ts)_
 
 ## `tim projects`
 
