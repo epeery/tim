@@ -63,7 +63,7 @@
       ]
     }
   },
-  "repository": "epeery/Tim",
+  "repository": "epeery/tim",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "tslint -p test -t stylish",
