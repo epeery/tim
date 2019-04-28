@@ -9,16 +9,12 @@ export default class Stop extends Command {
 
   static flags = {
     help: flags.help({char: 'h'}),
-    note: flags.string({
-      char: 'n',
-      default: ''
-    })
   }
 
   static strict = false
 
   async run() {
-    const {flags} = this.parse(Stop)
+    this.parse(Stop)
 
     const currentProjectFile = await getCurrentProjectFile(this.config.configDir)
     const current = await readJSON(currentProjectFile)
@@ -41,7 +37,7 @@ export default class Stop extends Command {
         start: start.toISOString(),
         end: now.toISOString(),
         time: difference,
-        note: flags.note
+        notes: current.notes
       }
 
       if (existsSync(dayFile)) {
@@ -55,7 +51,7 @@ export default class Stop extends Command {
       await writeFile(dayFile, json, 'utf-8')
       await writeFile(currentProjectFile, '{}')
 
-      this.log(`Stopped tracking "${current.name}"`)
+      this.log(`Stopped tracking: ${current.name}`)
     } else {
       this.error('No active project')
     }
