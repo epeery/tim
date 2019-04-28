@@ -1,9 +1,10 @@
 import {Command, flags} from '@oclif/command'
-import {existsSync, outputJson, readJSON, remove} from 'fs-extra'
+import {existsSync, outputJson, readJSON, remove, writeFile} from 'fs-extra'
 import {prompt} from 'inquirer'
 
 import {autocompleteProject} from '../../autocomplete-project'
 import {getCurrentProjectFile} from '../../get-current-project-file'
+import {getDayFile} from '../../get-day-file'
 import {getProjectDir} from '../../get-project-dir'
 
 export default class Remove extends Command {
@@ -44,6 +45,18 @@ export default class Remove extends Command {
       const current = await readJSON(currentProjectFile)
 
       remove(projectFile)
+
+      const now = new Date()
+      const dayFile = await getDayFile(this.config.configDir, now)
+      if (existsSync(dayFile)) {
+        const day = await readJSON(dayFile)
+        const filteredSessions = day.sessions.filter(({name}: {name: string}) => name !== project)
+
+        day.sessions = filteredSessions
+
+        const json = JSON.stringify(day, null, 4)
+        await writeFile(dayFile, json, 'utf-8')
+      }
 
       if (current.name === project) {
         await outputJson(currentProjectFile, {})
