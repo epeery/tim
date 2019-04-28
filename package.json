@@ -59,7 +59,7 @@
     ],
     "hooks": {
       "init": [
-        "./lib/hooks/init/create_files"
+        "./lib/hooks/init/create-files"
       ]
     }
   },
