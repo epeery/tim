@@ -35,7 +35,8 @@ export default class Start extends Command {
 
     const getJsonFormat = (name: string) => (start: string) => ({
       name,
-      start
+      start,
+      notes : []
     })
 
     const start = moment()
@@ -45,6 +46,6 @@ export default class Start extends Command {
     }
 
     outputJson(currentProjectFile, getJsonFormat(project)(start.toISOString()))
-    this.log(`The project "${project}" was started`)
+    this.log(`The project: "${project}" was started`)
   }
 }

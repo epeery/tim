@@ -31,7 +31,7 @@ export default class Add extends Command {
       this.error('Project already exists')
     } else {
       outputJson(projectFile, {name: project})
-      this.log(`The project "${project}" was created`)
+      this.log(`The project: "${project}" was created`)
     }
   }
 }
