@@ -21,7 +21,7 @@ $ npm install -g tim-time
 $ tim COMMAND
 running command...
 $ tim (-v|--version|version)
-tim-time/0.9.0-0 linux-x64 node-v11.14.0
+tim-time/0.9.0 linux-x64 node-v11.14.0
 $ tim --help [COMMAND]
 USAGE
   $ tim COMMAND
@@ -32,7 +32,7 @@ USAGE
 <!-- commands -->
 * [`tim add [PROJECT]`](#tim-add-project)
 * [`tim help [COMMAND]`](#tim-help-command)
-* [`tim note [FILE]`](#tim-note-file)
+* [`tim note`](#tim-note)
 * [`tim projects`](#tim-projects)
 * [`tim remove [PROJECT]`](#tim-remove-project)
 * [`tim start [PROJECT]`](#tim-start-project)
@@ -55,7 +55,7 @@ EXAMPLE
   $ tim add myproject
 ```
 
-_See code: [src/commands/add.ts](https://github.com/epeery/tim/blob/v0.9.0-0/src/commands/add.ts)_
+_See code: [src/commands/add.ts](https://github.com/epeery/tim/blob/v0.9.0/src/commands/add.ts)_
 
 ## `tim help [COMMAND]`
 
@@ -74,21 +74,20 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6/src/commands/help.ts)_
 
-## `tim note [FILE]`
+## `tim note`
 
 describe the command here
 
 ```
 USAGE
-  $ tim note [FILE]
+  $ tim note
 
 OPTIONS
-  -f, --force
   -h, --help       show CLI help
-  -n, --name=name  name to print
+  -n, --note=note  note to add
 ```
 
-_See code: [src/commands/note.ts](https://github.com/epeery/tim/blob/v0.9.0-0/src/commands/note.ts)_
+_See code: [src/commands/note.ts](https://github.com/epeery/tim/blob/v0.9.0/src/commands/note.ts)_
 
 ## `tim projects`
 
@@ -105,7 +104,7 @@ EXAMPLE
   $ tim projects
 ```
 
-_See code: [src/commands/projects.ts](https://github.com/epeery/tim/blob/v0.9.0-0/src/commands/projects.ts)_
+_See code: [src/commands/projects.ts](https://github.com/epeery/tim/blob/v0.9.0/src/commands/projects.ts)_
 
 ## `tim remove [PROJECT]`
 
@@ -123,7 +122,7 @@ EXAMPLE
   $ tim remove myproject
 ```
 
-_See code: [src/commands/remove/index.ts](https://github.com/epeery/tim/blob/v0.9.0-0/src/commands/remove/index.ts)_
+_See code: [src/commands/remove/index.ts](https://github.com/epeery/tim/blob/v0.9.0/src/commands/remove/index.ts)_
 
 ## `tim start [PROJECT]`
 
@@ -137,7 +136,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/start.ts](https://github.com/epeery/tim/blob/v0.9.0-0/src/commands/start.ts)_
+_See code: [src/commands/start.ts](https://github.com/epeery/tim/blob/v0.9.0/src/commands/start.ts)_
 
 ## `tim status`
 
@@ -151,7 +150,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/status.ts](https://github.com/epeery/tim/blob/v0.9.0-0/src/commands/status.ts)_
+_See code: [src/commands/status.ts](https://github.com/epeery/tim/blob/v0.9.0/src/commands/status.ts)_
 
 ## `tim stop`
 
@@ -162,11 +161,10 @@ USAGE
   $ tim stop
 
 OPTIONS
-  -h, --help       show CLI help
-  -n, --note=note
+  -h, --help  show CLI help
 ```
 
-_See code: [src/commands/stop.ts](https://github.com/epeery/tim/blob/v0.9.0-0/src/commands/stop.ts)_
+_See code: [src/commands/stop.ts](https://github.com/epeery/tim/blob/v0.9.0/src/commands/stop.ts)_
 
 ## `tim time`
 
@@ -180,5 +178,5 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/time.ts](https://github.com/epeery/tim/blob/v0.9.0-0/src/commands/time.ts)_
+_See code: [src/commands/time.ts](https://github.com/epeery/tim/blob/v0.9.0/src/commands/time.ts)_
 <!-- commandsstop -->

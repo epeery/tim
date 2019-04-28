@@ -1,7 +1,7 @@
 {
   "name": "tim-time",
   "description": "Tim is a time tracker for your terminal",
-  "version": "0.9.0-0",
+  "version": "0.9.0",
   "author": "Eli Peery",
   "bin": {
     "tim": "./bin/run"
