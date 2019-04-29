@@ -1,5 +1,6 @@
 import {Command, flags} from '@oclif/command'
 import {existsSync, readJSON, writeFile} from 'fs-extra'
+import * as shortid from 'shortid'
 
 import {getCurrentProjectFile} from '../get-current-project-file'
 import {getDayFile} from '../get-day-file'
@@ -37,7 +38,8 @@ export default class Stop extends Command {
         start: start.toISOString(),
         end: now.toISOString(),
         time: difference,
-        notes: current.notes
+        notes: current.notes,
+        id: shortid.generate()
       }
 
       if (existsSync(dayFile)) {
