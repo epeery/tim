@@ -60,6 +60,7 @@ export default class Sessions extends Command {
         },
         name: {
           minWidth: 7,
+          header: 'Project'
         },
         note: {
           minWidth: 7,

@@ -34,7 +34,8 @@ export default class Time extends Command {
 
       cli.table(dayArray, {
         name: {
-          minWidth: 10
+          minWidth: 10,
+          header: 'Project'
         },
         time: {
           get: row => formatTime(row.time)
