@@ -35,6 +35,7 @@ USAGE
 * [`tim note`](#tim-note)
 * [`tim projects`](#tim-projects)
 * [`tim remove [PROJECT]`](#tim-remove-project)
+* [`tim sessions [PROJECT]`](#tim-sessions-project)
 * [`tim start [PROJECT]`](#tim-start-project)
 * [`tim status`](#tim-status)
 * [`tim stop`](#tim-stop)
@@ -76,7 +77,7 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6
 
 ## `tim note`
 
-describe the command here
+add note to active project
 
 ```
 USAGE
@@ -85,6 +86,9 @@ USAGE
 OPTIONS
   -h, --help       show CLI help
   -n, --note=note  note to add
+
+EXAMPLE
+  $ tim note -n "This is a note"
 ```
 
 _See code: [src/commands/note.ts](https://github.com/epeery/tim/blob/v0.9.1/src/commands/note.ts)_
@@ -115,7 +119,7 @@ USAGE
   $ tim remove [PROJECT]
 
 OPTIONS
-  -c, --confirm
+  -c, --confirm  confirm removal
   -h, --help     show CLI help
 
 EXAMPLE
@@ -123,6 +127,21 @@ EXAMPLE
 ```
 
 _See code: [src/commands/remove/index.ts](https://github.com/epeery/tim/blob/v0.9.1/src/commands/remove/index.ts)_
+
+## `tim sessions [PROJECT]`
+
+list today's sessions
+
+```
+USAGE
+  $ tim sessions [PROJECT]
+
+OPTIONS
+  -a, --all   display sessions for all projects
+  -h, --help  show CLI help
+```
+
+_See code: [src/commands/sessions.ts](https://github.com/epeery/tim/blob/v0.9.1/src/commands/sessions.ts)_
 
 ## `tim start [PROJECT]`
 
