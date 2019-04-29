@@ -15,6 +15,7 @@
     "@types/dateformat": "^3.0.0",
     "@types/fs-extra": "^5.0.5",
     "@types/inquirer": "^6.0.1",
+    "@types/shortid": "^0.0.29",
     "dateformat": "^3.0.3",
     "fuzzy": "^0.1.3",
     "inquirer": "^6.3.1",

@@ -317,6 +317,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.14.5.tgz#27733a949f5d9972d87109297cffb62207ace70f"
   integrity sha512-Ja7d4s0qyGFxjGeDq5S7Si25OFibSAHUi6i17UWnwNnpitADN7hah9q0Tl25gxuV5R1u2Bx+np6w4LHXfHyj/g==
 
+"@types/shortid@^0.0.29":
+  version "0.0.29"
+  resolved "https://registry.yarnpkg.com/@types/shortid/-/shortid-0.0.29.tgz#8093ee0416a6e2bf2aa6338109114b3fbffa0e9b"
+  integrity sha1-gJPuBBam4r8qpjOBCRFLP7/6Dps=
+
 "@types/sinon@*":
   version "7.0.11"
   resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-7.0.11.tgz#6f28f005a36e779b7db0f1359b9fb9eef72aae88"
