@@ -61,7 +61,8 @@
     ],
     "hooks": {
       "init": [
-        "./lib/hooks/init/create-files"
+        "./lib/hooks/init/create-files",
+        "./lib/hooks/init/cleanup-sessions"
       ]
     }
   },
