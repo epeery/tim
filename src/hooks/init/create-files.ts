@@ -12,10 +12,10 @@ const hook: Hook<'init'> = async function (opts) {
   }
 
   const projectsDir = await getProjectsDir(this.config.configDir)
-  ensureDir(projectsDir)
+  await ensureDir(projectsDir)
 
   const sessionsDir = await getSessionsDir(this.config.configDir)
-  ensureDir(sessionsDir)
+  await ensureDir(sessionsDir)
 }
 
 export default hook
