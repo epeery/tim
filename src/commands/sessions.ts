@@ -11,7 +11,8 @@ export default class Sessions extends Command {
   static description = "list today's sessions"
 
   static flags = { help: flags.help({char: 'h'}),
-    all: flags.boolean({char: 'a', description: 'display sessions for all projects'})
+    all: flags.boolean({char: 'a', description: 'display sessions for all projects'}),
+    ...cli.table.flags()
   }
 
   static args = [{name: 'project'}]
@@ -46,24 +47,31 @@ export default class Sessions extends Command {
         this.log("You haven't logged any sessions today")
       }
     }
-  }
-}
 
-function printSessions(sessions: Array<object>) {
-  cli.table(sessions, {
-    start: {
-      minWidth: 7,
-      get: (row: any) => dateFormat(row.start, 'HH:mm')
-    },
-    end: {
-      minWidth: 7,
-      get: (row: any) => dateFormat(row.end, 'HH:mm')
-    },
-    name: {
-      minWidth: 7,
-    },
-    note: {
-      get: (row: any) => row.notes[0] || ''
+    function printSessions(sessions: Array<object>) {
+      cli.table(sessions, {
+        start: {
+          minWidth: 7,
+          get: (row: any) => dateFormat(row.start, 'HH:mm')
+        },
+        end: {
+          minWidth: 7,
+          get: (row: any) => dateFormat(row.end, 'HH:mm')
+        },
+        name: {
+          minWidth: 7,
+        },
+        note: {
+          minWidth: 7,
+          get: (row: any) => row.notes[0] || ''
+        },
+        id: {
+          header: 'ID',
+          extended: true
+        }
+      }, {
+        ...flags
+      })
     }
-  })
+  }
 }
