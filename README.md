@@ -35,6 +35,7 @@ USAGE
 * [`tim note`](#tim-note)
 * [`tim projects`](#tim-projects)
 * [`tim remove [PROJECT]`](#tim-remove-project)
+* [`tim remove:session [FILE]`](#tim-removesession-file)
 * [`tim sessions [PROJECT]`](#tim-sessions-project)
 * [`tim start [PROJECT]`](#tim-start-project)
 * [`tim status`](#tim-status)
@@ -128,6 +129,22 @@ EXAMPLE
 
 _See code: [src/commands/remove/index.ts](https://github.com/epeery/tim/blob/v0.9.1/src/commands/remove/index.ts)_
 
+## `tim remove:session [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ tim remove:session [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/remove/session.ts](https://github.com/epeery/tim/blob/v0.9.1/src/commands/remove/session.ts)_
+
 ## `tim sessions [PROJECT]`
 
 list today's sessions
@@ -137,8 +154,15 @@ USAGE
   $ tim sessions [PROJECT]
 
 OPTIONS
-  -a, --all   display sessions for all projects
-  -h, --help  show CLI help
+  -a, --all          display sessions for all projects
+  -h, --help         show CLI help
+  -x, --extended     show extra columns
+  --columns=columns  only show provided columns (comma-separated)
+  --csv              output is csv format
+  --filter=filter    filter property by partial string matching, ex: name=foo
+  --no-header        hide table header from output
+  --no-truncate      do not truncate output to fit screen
+  --sort=sort        property to sort by (prepend '-' for descending)
 ```
 
 _See code: [src/commands/sessions.ts](https://github.com/epeery/tim/blob/v0.9.1/src/commands/sessions.ts)_
