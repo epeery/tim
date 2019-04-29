@@ -55,11 +55,11 @@ export default class Sessions extends Command {
       cli.table(sessions, {
         start: {
           minWidth: 7,
-          get: (row: any) => dateFormat(row.start, 'HH:mm')
+          get: (row: any) => dateFormat(row.start, 'HH:MM')
         },
         end: {
           minWidth: 7,
-          get: (row: any) => dateFormat(row.end, 'HH:mm')
+          get: (row: any) => dateFormat(row.end, 'HH:MM')
         },
         name: {
           minWidth: 7,
