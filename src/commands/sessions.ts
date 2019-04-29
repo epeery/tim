@@ -49,12 +49,15 @@ export default class Sessions extends Command {
 function printSessions(sessions: Array<object>) {
   cli.table(sessions, {
     start: {
+      minWidth: 7,
       get: (row: any) => dateFormat(row.start, 'HH:mm')
     },
     end: {
+      minWidth: 7,
       get: (row: any) => dateFormat(row.end, 'HH:mm')
     },
     name: {
+      minWidth: 7,
     },
     note: {
       get: (row: any) => row.notes[0] || ''
