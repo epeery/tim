@@ -24,28 +24,31 @@ export default class Sessions extends Command {
 
     const now = new Date()
     const dayFile = await getDayFile(this.config.configDir, now)
-    const day = await readJSON(dayFile)
 
-    if (!flags.all) {
-      if (!project || !existsSync(projectFile)) {
-        project = await autocompleteProject(
-          this.config.configDir,
-          () => this.error('You have no projects\nAdd one using: tim add')
-        )
-      }
+    if (existsSync(dayFile)) {
+      const day = await readJSON(dayFile)
 
-      const filteredSessions = day.sessions.filter(({name}: {name: string}) => name === project)
-      if (filteredSessions.length > 0) {
-        printSessions(filteredSessions)
+      if (!flags.all) {
+        if (!project || !existsSync(projectFile)) {
+          project = await autocompleteProject(
+            this.config.configDir,
+            () => this.error('You have no projects\nAdd one using: tim add')
+          )
+        }
+
+        const filteredSessions = day.sessions.filter(({name}: {name: string}) => name === project)
+        if (filteredSessions.length > 0) {
+          printSessions(filteredSessions)
+        } else {
+          this.log(`You haven't logged any sessions for: "${project}" today`)
+        }
+
       } else {
-        this.log(`You haven't logged any sessions for: "${project}" today`)
-      }
-    } else {
-      if (day.sessions.length > 0) {
         printSessions(day.sessions)
-      } else {
-        this.log("You haven't logged any sessions today")
       }
+
+    } else {
+      this.log("You haven't logged any sessions today")
     }
 
     function printSessions(sessions: Array<object>) {
