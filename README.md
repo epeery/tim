@@ -33,7 +33,7 @@ USAGE
 * [`tim add [PROJECT]`](#tim-add-project)
 * [`tim help [COMMAND]`](#tim-help-command)
 * [`tim note`](#tim-note)
-* [`tim notes [FILE]`](#tim-notes-file)
+* [`tim notes [PROJECT]`](#tim-notes-project)
 * [`tim projects`](#tim-projects)
 * [`tim remove [PROJECT]`](#tim-remove-project)
 * [`tim remove:session ID`](#tim-removesession-id)
@@ -95,18 +95,17 @@ EXAMPLE
 
 _See code: [src/commands/note.ts](https://github.com/epeery/tim/blob/v0.9.2/src/commands/note.ts)_
 
-## `tim notes [FILE]`
+## `tim notes [PROJECT]`
 
-describe the command here
+display notes from the day
 
 ```
 USAGE
-  $ tim notes [FILE]
+  $ tim notes [PROJECT]
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -a, --all   display notes from all projects
+  -h, --help  show CLI help
 ```
 
 _See code: [src/commands/notes.ts](https://github.com/epeery/tim/blob/v0.9.2/src/commands/notes.ts)_
