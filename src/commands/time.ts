@@ -1,4 +1,5 @@
 import {Command, flags} from '@oclif/command'
+import cli from 'cli-ux'
 import {existsSync, readJSON} from 'fs-extra'
 
 import {default as formatTime} from '../format-time'
@@ -31,8 +32,14 @@ export default class Time extends Command {
 
       const dayArray = Object.keys(parsedDay).map(name => ({name, time: parsedDay[name]}))
 
-      dayArray.map(project => this.log(project.name + ': ' + formatTime(project.time)))
-
+      cli.table(dayArray, {
+        name: {
+          minWidth: 10
+        },
+        time: {
+          get: row => formatTime(row.time)
+        }
+      })
     } else {
       this.log("You haven't logged any sessions today")
     }
