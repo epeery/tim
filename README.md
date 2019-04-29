@@ -33,6 +33,7 @@ USAGE
 * [`tim add [PROJECT]`](#tim-add-project)
 * [`tim help [COMMAND]`](#tim-help-command)
 * [`tim note`](#tim-note)
+* [`tim notes [FILE]`](#tim-notes-file)
 * [`tim projects`](#tim-projects)
 * [`tim remove [PROJECT]`](#tim-remove-project)
 * [`tim remove:session ID`](#tim-removesession-id)
@@ -93,6 +94,22 @@ EXAMPLE
 ```
 
 _See code: [src/commands/note.ts](https://github.com/epeery/tim/blob/v0.9.2/src/commands/note.ts)_
+
+## `tim notes [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ tim notes [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/notes.ts](https://github.com/epeery/tim/blob/v0.9.2/src/commands/notes.ts)_
 
 ## `tim projects`
 
