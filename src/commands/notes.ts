@@ -42,7 +42,7 @@ export default class Notes extends Command {
 
         if (sessionsWithNotes.length > 0) {
           sessionsWithNotes.map(({start, end, notes}: {start: string, end: string, notes: Array<string>}) => {
-            const label = `${dateFormat(start, 'HH:mm')}-${dateFormat(end, 'HH:mm')}`
+            const label = `${dateFormat(start, 'HH:MM')}-${dateFormat(end, 'HH:MM')}`
 
             if (!tree.nodes[label]) {
               tree.insert(label)
@@ -58,7 +58,7 @@ export default class Notes extends Command {
         const sessionsWithNotes = day.sessions.filter(({notes}: {notes: Array<string>}) => notes.length > 0)
 
         sessionsWithNotes.map(({name, start, end, notes}: {name: string, start: string, end: string, notes: Array<string>}) => {
-          const label = `${name}: ${dateFormat(start, 'HH:mm')}-${dateFormat(end, 'HH:mm')}`
+          const label = `${name}: ${dateFormat(start, 'HH:MM')}-${dateFormat(end, 'HH:MM')}`
 
           if (!tree.nodes[label]) {
             tree.insert(label)
