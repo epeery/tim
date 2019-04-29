@@ -5,7 +5,13 @@ import {readJSON, writeFile} from 'fs-extra'
 import {getCurrentProjectFile} from '../get-current-project-file'
 
 export default class Note extends Command {
-  static description = 'describe the command here'
+  static description = 'add note to active project'
+
+  static examples = [
+    `$ tim note -n "This is a note"
+`,
+  ]
+
 
   static flags = {
     help: flags.help({char: 'h'}),
