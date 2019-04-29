@@ -17,7 +17,7 @@ export default class Remove extends Command {
 
   static flags = {
     help: flags.help({char: 'h'}),
-    confirm: flags.boolean({char: 'c'}),
+    confirm: flags.boolean({char: 'c', description: 'confirm removal'}),
   }
 
   static args = [{name: 'project'}]
