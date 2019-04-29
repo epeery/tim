@@ -10,8 +10,7 @@ import {getProjectFile} from '../get-project-file'
 export default class Sessions extends Command {
   static description = "list today's sessions"
 
-  static flags = {
-    help: flags.help({char: 'h'}),
+  static flags = { help: flags.help({char: 'h'}),
     all: flags.boolean({char: 'a', description: 'display sessions for all projects'})
   }
 
@@ -41,7 +40,11 @@ export default class Sessions extends Command {
         this.log(`You haven't logged any sessions for: "${project}" today`)
       }
     } else {
-      printSessions(day.sessions)
+      if (day.sessions.length > 0) {
+        printSessions(day.sessions)
+      } else {
+        this.log("You haven't logged any sessions today")
+      }
     }
   }
 }
