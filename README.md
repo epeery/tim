@@ -21,7 +21,7 @@ $ npm install -g tim-time
 $ tim COMMAND
 running command...
 $ tim (-v|--version|version)
-tim-time/0.9.1 linux-x64 node-v11.14.0
+tim-time/0.9.2 linux-x64 node-v11.14.0
 $ tim --help [COMMAND]
 USAGE
   $ tim COMMAND
@@ -35,7 +35,7 @@ USAGE
 * [`tim note`](#tim-note)
 * [`tim projects`](#tim-projects)
 * [`tim remove [PROJECT]`](#tim-remove-project)
-* [`tim remove:session [FILE]`](#tim-removesession-file)
+* [`tim remove:session ID`](#tim-removesession-id)
 * [`tim sessions [PROJECT]`](#tim-sessions-project)
 * [`tim start [PROJECT]`](#tim-start-project)
 * [`tim status`](#tim-status)
@@ -57,7 +57,7 @@ EXAMPLE
   $ tim add myproject
 ```
 
-_See code: [src/commands/add.ts](https://github.com/epeery/tim/blob/v0.9.1/src/commands/add.ts)_
+_See code: [src/commands/add.ts](https://github.com/epeery/tim/blob/v0.9.2/src/commands/add.ts)_
 
 ## `tim help [COMMAND]`
 
@@ -92,7 +92,7 @@ EXAMPLE
   $ tim note -n "This is a note"
 ```
 
-_See code: [src/commands/note.ts](https://github.com/epeery/tim/blob/v0.9.1/src/commands/note.ts)_
+_See code: [src/commands/note.ts](https://github.com/epeery/tim/blob/v0.9.2/src/commands/note.ts)_
 
 ## `tim projects`
 
@@ -109,7 +109,7 @@ EXAMPLE
   $ tim projects
 ```
 
-_See code: [src/commands/projects.ts](https://github.com/epeery/tim/blob/v0.9.1/src/commands/projects.ts)_
+_See code: [src/commands/projects.ts](https://github.com/epeery/tim/blob/v0.9.2/src/commands/projects.ts)_
 
 ## `tim remove [PROJECT]`
 
@@ -127,23 +127,25 @@ EXAMPLE
   $ tim remove myproject
 ```
 
-_See code: [src/commands/remove/index.ts](https://github.com/epeery/tim/blob/v0.9.1/src/commands/remove/index.ts)_
+_See code: [src/commands/remove/index.ts](https://github.com/epeery/tim/blob/v0.9.2/src/commands/remove/index.ts)_
 
-## `tim remove:session [FILE]`
+## `tim remove:session ID`
 
 describe the command here
 
 ```
 USAGE
-  $ tim remove:session [FILE]
+  $ tim remove:session ID
+
+ARGUMENTS
+  ID  ID of session to remove
+      find with: tim sessions -x
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -h, --help  show CLI help
 ```
 
-_See code: [src/commands/remove/session.ts](https://github.com/epeery/tim/blob/v0.9.1/src/commands/remove/session.ts)_
+_See code: [src/commands/remove/session.ts](https://github.com/epeery/tim/blob/v0.9.2/src/commands/remove/session.ts)_
 
 ## `tim sessions [PROJECT]`
 
@@ -165,7 +167,7 @@ OPTIONS
   --sort=sort        property to sort by (prepend '-' for descending)
 ```
 
-_See code: [src/commands/sessions.ts](https://github.com/epeery/tim/blob/v0.9.1/src/commands/sessions.ts)_
+_See code: [src/commands/sessions.ts](https://github.com/epeery/tim/blob/v0.9.2/src/commands/sessions.ts)_
 
 ## `tim start [PROJECT]`
 
@@ -179,7 +181,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/start.ts](https://github.com/epeery/tim/blob/v0.9.1/src/commands/start.ts)_
+_See code: [src/commands/start.ts](https://github.com/epeery/tim/blob/v0.9.2/src/commands/start.ts)_
 
 ## `tim status`
 
@@ -193,7 +195,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/status.ts](https://github.com/epeery/tim/blob/v0.9.1/src/commands/status.ts)_
+_See code: [src/commands/status.ts](https://github.com/epeery/tim/blob/v0.9.2/src/commands/status.ts)_
 
 ## `tim stop`
 
@@ -207,7 +209,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/stop.ts](https://github.com/epeery/tim/blob/v0.9.1/src/commands/stop.ts)_
+_See code: [src/commands/stop.ts](https://github.com/epeery/tim/blob/v0.9.2/src/commands/stop.ts)_
 
 ## `tim time`
 
@@ -221,5 +223,5 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/time.ts](https://github.com/epeery/tim/blob/v0.9.1/src/commands/time.ts)_
+_See code: [src/commands/time.ts](https://github.com/epeery/tim/blob/v0.9.2/src/commands/time.ts)_
 <!-- commandsstop -->
