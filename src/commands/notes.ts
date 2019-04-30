@@ -70,7 +70,7 @@ export default class Notes extends Command {
 
       tree.display()
     } else {
-      this.log("You haven't logged any sessions today")
+      this.log("You haven't logged any notes today")
     }
   }
 }
