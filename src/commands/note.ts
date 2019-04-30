@@ -12,7 +12,6 @@ export default class Note extends Command {
 `,
   ]
 
-
   static flags = {
     help: flags.help({char: 'h'}),
     note: flags.string({char: 'n', description: 'note to add'}),
