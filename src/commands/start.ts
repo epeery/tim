@@ -1,6 +1,5 @@
 import {Command, flags} from '@oclif/command'
 import {existsSync, outputJson, readJSON} from 'fs-extra'
-import * as moment from 'moment'
 
 import {autocompleteProject} from '../autocomplete-project'
 import {getCurrentProjectFile} from '../get-current-project-file'
@@ -39,13 +38,13 @@ export default class Start extends Command {
       notes : []
     })
 
-    const start = moment()
+    const start = new Date()
 
     if (current.name) {
       await Stop.run()
     }
 
-    outputJson(currentProjectFile, getJsonFormat(project)(start.toISOString()))
+    outputJson(currentProjectFile, getJsonFormat(project)(start.toJSON()))
     this.log(`The project: "${project}" was started`)
   }
 }
