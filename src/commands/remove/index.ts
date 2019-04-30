@@ -64,7 +64,7 @@ export default class Remove extends Command {
 
       this.log(`The project "${project}" was removed`)
     } else {
-      this.log(`The project "${project}" was not removed`)
+      this.log(`Canceled removal of project: ${project}`)
     }
   }
 }
