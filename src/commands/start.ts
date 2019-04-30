@@ -44,7 +44,7 @@ export default class Start extends Command {
       await Stop.run()
     }
 
-    outputJson(currentProjectFile, getJsonFormat(project)(start.toJSON()))
+    await outputJson(currentProjectFile, getJsonFormat(project)(start.toJSON()))
     this.log(`The project: "${project}" was started`)
   }
 }
