@@ -44,7 +44,7 @@ export default class Remove extends Command {
       const currentProjectFile = await getCurrentProjectFile(this.config.configDir)
       const current = await readJSON(currentProjectFile)
 
-      remove(projectFile)
+      await remove(projectFile)
 
       const now = new Date()
       const dayFile = await getDayFile(this.config.configDir, now)
