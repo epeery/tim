@@ -1,17 +1,20 @@
 import {expect, test} from '@oclif/test'
+import {remove} from 'fs-extra'
 
 describe('add', () => {
   test
+    .env({XDG_CONFIG_HOME: './test/test-config'})
     .stdout()
-    .command(['add'])
-    .it('runs hello', ctx => {
-      expect(ctx.stdout).to.contain('hello world')
+    .command(['add', 'add-test'])
+    .it('adds a project', ctx => {
+      expect(ctx.stdout).to.contain('add-test')
     })
 
   test
-    .stdout()
-    .command(['add', '--name', 'jeff'])
-    .it('runs hello --name jeff', ctx => {
-      expect(ctx.stdout).to.contain('hello jeff')
-    })
+    .env({XDG_CONFIG_HOME: './test/test-config'})
+    .stderr({print: true})
+    .command(['add', 'add-test'])
+    .exit(2)
+    .do(() => remove('./test/test-config'))
+    .it('exits if project already exists')
 })
