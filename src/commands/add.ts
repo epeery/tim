@@ -31,6 +31,7 @@ export default class Add extends Command {
     // projectFile :: String
     const projectFile = await getProjectFile(this.config.configDir, project)
 
+    // future :: IO () -> Future ()
     const future = futurize(Task)
 
     // output :: Path -> JSON -> Future ()
