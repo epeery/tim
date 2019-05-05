@@ -1,8 +1,11 @@
 import {Command, flags} from '@oclif/command'
 import cli from 'cli-ux'
+import * as Task from 'data.task'
 import {existsSync, outputJson} from 'fs-extra'
+import {futurize} from 'futurize'
 
 import {getProjectFile} from '../get-project-file'
+import {eitherFromBool, eitherFromNullable} from '../utils'
 
 export default class Add extends Command {
   static description = 'add a new project'
@@ -19,45 +22,25 @@ export default class Add extends Command {
   async run() {
     const {args} = this.parse(Add)
 
-    const Right = (x: any) => ({
-      x,
-      map: (f: any) => Right(f(x)),
-      fold: (_: any, g: any) => g(x),
-      chain: (f: any) => f(x),
-      ap: (o: any) => x(o.x),
-      inspect: () => `Right(${x})`
-    })
-
-    const Left = (x: any) => ({
-      x,
-      map: (_: any) => Left(x),
-      fold: (f: any, _: any) => f(x),
-      chain: (_: any) => Left(x),
-      ap: (_: any) => Left(x),
-      inspect: () => `Left(${x})`
-    })
-
-    // eitherFromNullable :: a -> Either a
-    const eitherFromNullable = (x: any) => (x !== null && x !== undefined) ? Right(x) : Left(null)
-
-    // eitherFromNullable :: Bool -> Either Bool
-    const eitherFromBool = (x: boolean) => x ? Right(x) : Left(false)
-
     const project = await eitherFromNullable(args.project)
       .fold(
         () => cli.prompt('What is your project called?')
-        , (x: string) => x
-      )
+        , (x: string) => x)
 
     const projectFile = await getProjectFile(this.config.configDir, project)
 
-    eitherFromBool(await existsSync(projectFile))
+    const future = futurize(Task)
+
+    const output = future(outputJson)
+
+    const outputProject = () => output(projectFile, {name: project})
+      .fork(
+        this.error
+        , () => this.log(`The project: "${project}" was created`))
+
+    eitherFromBool(existsSync(projectFile))
       .fold(
-        async () => {
-          await outputJson(projectFile, {name: project})
-          this.log(`The project: "${project}" was created`)
-        }
-        , () => this.error('Project already exists')
-      )
+        outputProject
+        , () => this.error('Project already exists'))
   }
 }
