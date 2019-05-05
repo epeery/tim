@@ -22,22 +22,27 @@ export default class Add extends Command {
   async run() {
     const {args} = this.parse(Add)
 
+    // project :: IO String
     const project = await eitherFromNullable(args.project)
       .fold(
         () => cli.prompt('What is your project called?')
         , (x: string) => x)
 
+    // projectFile :: String
     const projectFile = await getProjectFile(this.config.configDir, project)
 
     const future = futurize(Task)
 
+    // output :: Path -> JSON -> Future ()
     const output = future(outputJson)
 
+    // outputProject :: Future ()
     const outputProject = () => output(projectFile, {name: project})
       .fork(
         this.error
         , () => this.log(`The project: "${project}" was created`))
 
+    // eitherFromBool :: IO ()
     eitherFromBool(existsSync(projectFile))
       .fold(
         outputProject
