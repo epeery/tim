@@ -19,5 +19,5 @@ export const Left = (x: any) => ({
 // eitherFromNullable :: a -> Either a
 export const eitherFromNullable = (x: any) => (x !== null && x !== undefined) ? Right(x) : Left(null)
 
-// eitherFromNullable :: Bool -> Either Bool
+// eitherFromBool :: Bool -> Either Bool
 export const eitherFromBool = (x: boolean) => x ? Right(x) : Left(false)
