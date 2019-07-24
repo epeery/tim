@@ -3,7 +3,7 @@
 
 Tim is a time tracker for your terminal
 
-NOTE: This project is in alpha. Things are prone to break.
+DEPRICATED: This project has been depricated. It should be usable but is no longer under active development.
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/tim-time.svg)](https://npmjs.org/package/tim-time)
